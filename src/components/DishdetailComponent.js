@@ -23,17 +23,17 @@ renderDish(dish) {
 renderComments (comments)  {
 if (comments != null)
   return(
-    comments.map((comment) => { 
-  return ( 
-  <div>  
-  <li className=" list-unstyled " key={comment.id}>
+    comments.comments.map((comment) => {
+  return (
+  <div>
+  <li  key={comment.id}>
     <p>{comment.comment}</p>
-    <p>-- {comment.author}, {comment.date}</p>
+    <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
   </li>
   </div>
     );
     })
-  ) 
+  )
   else
   return(
   <div></div>
@@ -43,27 +43,24 @@ if (comments != null)
 render() {
   return (
     <div className="container">
-    <div className="row"> 
+    <div className="row">
 
     <div className="col-12 col-md-5 m-1">
-    {this.renderDish(this.props.selectedDish)}
+    {this.renderDish(this.props.dish)}
     </div>
 
     <div className="col-12 col-md-5 m-1">
     <div>
-    <h4>{this.props.comments}</h4>
-    <ul calassName = "list-unstyled">
-    {this.renderComments(this.props.selectedComments)}
+    <h4>{this.props.com}</h4>
+    <ul className=" list-unstyled ">
+    {this.renderComments(this.props.dish)}
     </ul>
     </div>
     </div>
-    
+
     </div>
     </div>
   )}
 }
 
 export default DishdetailComponent
-
-
-
