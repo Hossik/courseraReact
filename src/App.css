@@ -31,8 +31,6 @@ address{
 .navbar-dark {
     background-color: #512DA8;
 }
-button{
-  border: none;
-  background-color: #D1C4E9;
-  color:  blue;
+#brand{
+  margin: 10px;
 }
