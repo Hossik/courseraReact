@@ -5,11 +5,13 @@ import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import Footer  from './FooterComponent';
 import DishDetail from './DishdetailComponent';
+import About from './AboutComponent';
 import {DISHES} from '../shared/dishes';
 import {COMMENTS} from '../shared/comments';
 import {PROMOTIONS} from '../shared/promotions';
 import {LEADERS} from '../shared/leaders';
 import { Switch, Route, Redirect } from 'react-router-dom';
+
 
 class Main extends Component{
 
@@ -24,6 +26,12 @@ class Main extends Component{
 }
 
   render() {
+
+const Leader = () =>{
+  return(
+    <About leaders={this.state.leaders}/>
+  )
+}
 
   const HomePage = () =>{
     return(
@@ -45,6 +53,7 @@ class Main extends Component{
       <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
+          <Route path="/Aboutus" component={Leader} />
           <Route exact path="/menu" component={() =><Menu dishes={this.state.dishes} />} />
           <Route path="/menu/:dishId" component={DishWithId} />
           <Route exact path='/contactus' component={Contact} />
