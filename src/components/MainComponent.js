@@ -27,7 +27,7 @@ class Main extends Component{
 
   render() {
 
-const Leader = () =>{
+const RenderLeader = () =>{
   return(
     <About leaders={this.state.leaders}/>
   )
@@ -53,7 +53,7 @@ const Leader = () =>{
       <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
-          <Route path="/Aboutus" component={Leader} />
+          <Route path="/Aboutus" component={RenderLeader} />
           <Route exact path="/menu" component={() =><Menu dishes={this.state.dishes} />} />
           <Route path="/menu/:dishId" component={DishWithId} />
           <Route exact path='/contactus' component={Contact} />
