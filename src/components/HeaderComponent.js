@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeder, ModalBody } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -20,7 +20,7 @@ class Header extends Component {
 
 render() {
 return(
-    <div>
+    <React.Fragment>
         <Navbar dark expand="md">
             <div className="container">
                 <NavbarToggler  onClick={this.toggleNav} />
@@ -53,7 +53,8 @@ return(
                 </div>
             </div>
         </Jumbotron>
-    </div>
+
+    </React.Fragment>
     );
 }
 }
