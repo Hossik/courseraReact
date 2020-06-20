@@ -38,7 +38,7 @@ return(
         <Navbar dark expand="md">
             <div className="container">
                 <NavbarToggler  onClick={this.toggleNav} />
-                <NavbarBrand id="brand" className="mr-auto" href="/"><img src='assets/images/logo.png' zheight="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+                <NavbarBrand id="brand" className="mr-auto" href="/"><img src='../assets/images/logo.png' zheight="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
                 <Collapse isOpen={this.state.isNavOpen} navbar>
                     <Nav navbar>
                     <NavItem>
